@@ -1,0 +1,1 @@
+print("Nao teve prova")
