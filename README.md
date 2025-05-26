@@ -49,6 +49,7 @@ Então vamos clonar o repositório remoto para obter uma versão local usando **
 ```
 $ git clone https://github.com/Abmp-ribeiro/Workshop_git.git
 ```
+Basta então entrar no repositório em questão usando cd.
 
 ### Abrindo o VSCode
 
@@ -63,13 +64,10 @@ A principal ferramenta que você usa para determinar quais arquivos estão em qu
 ```
 $ git status
 ```
-### Criar uma branch a partir da main
 
-```
-$ git branch <branch_name>
-``` 
+### Movimentar-se entre branches
 
-### Trocar de branch
+De forma padrão, ao clonar um repositório você se encontra na main.
 
 Recuperar informações remotas: 
 ```
@@ -79,11 +77,17 @@ $ git fetch origin
 Trocar efetivamente de branch: 
 ```
 $ git checkout <branch_name>
-```
+``` 
 Para trocar para uma nova branch use: 
 ```
 $ git checkout -b <branch_name>
 ```
+
+Ao trabalhar em uma mesma branch que outras pessoas ou caso deseje informações de outra branch na sua local é necessário atualizar sua versão local com informações que estão apenas remotas usando o comando: 
+```
+$ git pull <branch_remota> <brach_local>
+```
+Isso cria o chamado pull request. 
 
 ### Adicionando elementos a um commit
 
@@ -114,6 +118,11 @@ Por default, no repositório do Arara, não se pode commitar uma mudança sem um
 Se você quiser refazer esse commit, faça as alterações adicionais que você esqueceu, organize-as e faça o commit novamente usando a opção --amend. É importante entender que, ao alterar seu último commit, você não está exatamente corrigindo-o, mas sim substituindo-o por um novo commit aprimorado que remove o antigo do caminho e coloca o novo commit em seu lugar. Efetivamente, é como se o commit anterior nunca tivesse acontecido e não aparecesse no histórico do seu repositório. 
 ```
 $ git commit -ammend
+```
+
+No entanto, até esse momento essas mudanças existem apenas na sua máquina (localmente), ainda é necessário disponibiliza-las remotamente. Para tal use: 
+```
+$ git push
 ```
 
 ### Visualizar histórico de commits
