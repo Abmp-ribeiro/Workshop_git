@@ -1,0 +1,1 @@
+print("Eu e minha namorada fizemos a faxina em casa que estava precisando, e agora está tudo limpinho e organizado!")
