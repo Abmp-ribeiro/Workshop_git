@@ -67,7 +67,14 @@ $ git status
 
 ### Movimentar-se entre branches
 
-De forma padrão, ao clonar um repositório você se encontra na main.
+De forma padrão, ao clonar um repositório você se encontra na main. Para visualizar as branches usa-se o comando: 
+```
+$ git branch
+``` 
+Para visualizar também branches remotas utilize: 
+```
+$ git branch -a
+``` 
 
 Recuperar informações remotas: 
 ```
@@ -87,6 +94,7 @@ Ao trabalhar em uma mesma branch que outras pessoas ou caso deseje informações
 ```
 $ git pull <branch_remota> <brach_local>
 ```
+Esse é o chamado pull request.
 
 
 ### Adicionando elementos a um commit
