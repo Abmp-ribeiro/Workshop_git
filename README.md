@@ -49,6 +49,7 @@ Então vamos clonar o repositório remoto para obter uma versão local usando **
 ```
 $ git clone https://github.com/Abmp-ribeiro/Workshop_git.git
 ```
+Basta então entrar no repositório em questão usando cd.
 
 ### Abrindo o VSCode
 
@@ -63,13 +64,17 @@ A principal ferramenta que você usa para determinar quais arquivos estão em qu
 ```
 $ git status
 ```
-### Criar uma branch a partir da main
 
+### Movimentar-se entre branches
+
+De forma padrão, ao clonar um repositório você se encontra na main. Para visualizar as branches usa-se o comando: 
 ```
-$ git branch <branch_name>
+$ git branch
 ``` 
-
-### Trocar de branch
+Para visualizar também branches remotas utilize: 
+```
+$ git branch -a
+``` 
 
 Recuperar informações remotas: 
 ```
@@ -79,11 +84,18 @@ $ git fetch origin
 Trocar efetivamente de branch: 
 ```
 $ git checkout <branch_name>
-```
+``` 
 Para trocar para uma nova branch use: 
 ```
 $ git checkout -b <branch_name>
 ```
+
+Ao trabalhar em uma mesma branch que outras pessoas ou caso deseje informações de outra branch na sua local é necessário atualizar sua versão local com informações que estão apenas remotas usando o comando: 
+```
+$ git pull <branch_remota> <brach_local>
+```
+Esse é o chamado pull request.
+
 
 ### Adicionando elementos a um commit
 
@@ -115,6 +127,15 @@ Se você quiser refazer esse commit, faça as alterações adicionais que você 
 ```
 $ git commit -ammend
 ```
+
+No entanto, até esse momento essas mudanças existem apenas na sua máquina (localmente), ainda é necessário disponibiliza-las remotamente. Para tal use: 
+```
+$ git push
+```
+Caso sua branch local não exista ainda no repositório remoto, apenas pela primeira vez o comando a ser dado segue o padrão:
+```
+$ git push --set-upstream origin <branch_name>
+``` 
 
 ### Visualizar histórico de commits
 
