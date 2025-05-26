@@ -87,7 +87,7 @@ Ao trabalhar em uma mesma branch que outras pessoas ou caso deseje informações
 ```
 $ git pull <branch_remota> <brach_local>
 ```
-Isso cria o chamado pull request. 
+
 
 ### Adicionando elementos a um commit
 
@@ -124,6 +124,10 @@ No entanto, até esse momento essas mudanças existem apenas na sua máquina (lo
 ```
 $ git push
 ```
+Caso sua branch local não exista ainda no repositório remoto, apenas pela primeira vez o comando a ser dado segue o padrão:
+```
+$ git push --set-upstream origin <branch_name>
+``` 
 
 ### Visualizar histórico de commits
 
